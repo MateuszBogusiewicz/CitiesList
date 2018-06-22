@@ -1,0 +1,62 @@
+body {
+    background-image: url("/img/background.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcomeDiv{
+    display: block;
+    background-color: transparent;
+    width: 260px;
+    height: 90px;
+    padding-top: 350px;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.cityListButton{
+    display: block;
+    margin:auto;
+    align-content: center;
+    width: 200px;
+}
+
+.row {
+    height: 50px;
+    width: 150px;
+    text-align: center
+}
+
+.languageRow {
+    height: 50px;
+    width: 250px;
+    text-align: center
+}
+
+.table {
+    background: rgba(255,255,255,0.45);
+    border-radius: 8px;
+    text-align: center
+}
+
+#container {
+    padding-top: 200px;
+    height: 300px;
+    width: 1300px;
+    margin: auto;
+}
+
+#tableDiv{
+    width: 1100px;
+    float: left;
+}
+
+#filter {
+    width:200px;
+    float: left;
+}
+#clear {
+    clear: both;
+}

@@ -1,0 +1,46 @@
+{% extends "@Cities/CityView/baseView.html.twig" %}
+
+{% block body %}
+<body>
+<div id='container'>
+    <div id='tableDiv'>
+        <table class='table'>
+            <thead>
+            <tr>
+                <th class='row'>City</th>
+                <th class='row'>Country</th>
+                <th class='languageRow'>Languages</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in rows %}
+            <tr style='border-top: inherit;'>
+                <td class='row'>{{ row.cityName }}</td>
+                <td class='row'>{{ row.countryName }}</td>
+                <td class='languageRow'>{{ row.languages }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div style='text-align: center'>
+           {% include "@Cities/CityView/paginationControl.html.twig"%}
+        </div>
+    </div>
+    <div id='filter'>
+        <form method='GET' action='{{ path('citiesList') }}'>
+            <label>
+                <input value="{% if cityFilter is not empty %}{{ cityFilter }}{% endif %}" type="text" name='cityFilter' placeholder="What city are you looking for?" style="width: 250px">
+            </label>
+            <br>
+            <select style="width: 250px" name='viewOrder'>
+                <option value='ASC' {% if viewOrder == 'ASC' %}selected{% endif %}>City list from aA-zZ.</option>
+                <option value='DESC'{% if viewOrder == 'DESC' %}selected{% endif %}>City list from Zz-Aa.</option>
+            </select>
+            <br>
+            <input class='btn btn-default' type='submit' value='Filter cities'>
+        </form>
+    </div>
+    <div id='clear'></div>
+</div>
+</body>
+{% endblock %}

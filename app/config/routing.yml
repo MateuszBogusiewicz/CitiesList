@@ -1,0 +1,4 @@
+cities:
+    resource: "@CitiesBundle/Controller/"
+    type:     annotation
+    prefix:   /

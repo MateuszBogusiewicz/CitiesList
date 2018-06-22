@@ -1,0 +1,13 @@
+{% extends "@Cities/CityView/baseView.html.twig" %}
+
+{% block body %}
+<body>
+    <div class="welcomeDiv">
+        <p>
+            Sole point of this application is to present you list of existing cities around the world.
+            In order to proceed, please click button below.
+        </p>
+        <a href="{{ path('citiesList') }}" class="btn btn-default cityListButton" id="cityList">Let's see our city list.</a>
+    </div>
+</body>
+{% endblock %}
