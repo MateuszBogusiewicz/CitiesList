@@ -1,11 +1,13 @@
-Albion
+CitiesList
 ======
 
-Albion Online to gra sandbox MMORPG umiejscowiona w otwartym, średniowiecznym świecie fantasy.
+This is example of simple Symfony 3.4 application. It's sole purpose is to show list of all the cities around the world.
+There are few additional informations, aswell as pagination and filter option.
 
-Data wydania: 17 lipca 2017
-Wydawca: Sandbox Interactive GmbH
-Twórca: Sandbox Interactive GmbH
-Gatunek: MMORPG
-Silnik: Unity
-Platformy: Android, iOS, Microsoft Windows, Linux, macOS, Mac OS
+Instalation
+===
+1) Create database
+2) Import data -> php bin/console doctrine:database:import entryData.sql
+3) Install npm -> npm init
+4) Install gulp (task runner) -> npm install gulp
+5) Install gulp pacages from gulpfile.js -> npm install gulp-sass
